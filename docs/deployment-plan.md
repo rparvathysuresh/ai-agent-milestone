@@ -29,7 +29,6 @@ For the pipeline to authenticate with Groq and your MCP server, you must provide
 5. Add the following secrets one by one, copying the values from your local `.env` file:
 
 **Required Secrets to add:**
-- `LLM_API_KEY` = `AQ.Ab8...` (Your Gemini API Key)
 - `GROQ_API_KEY` = `gsk_...` (Your Groq API Key)
 - `MCP_SERVER_URL` = (Ensure this points to your hosted Railway MCP server, e.g., `https://mcp-server-production-1ca2.up.railway.app/sse`, NOT localhost)
 - `MCP_AUTH_TOKEN` = `parvathy`

@@ -32,8 +32,6 @@ dotenv.config();
 
 // ── Pipeline configuration ──────────────────────────────────
 const config = {
-  llmApiKey: process.env.LLM_API_KEY,
-  llmModel: process.env.LLM_MODEL || 'gemini-2.0-flash',
   groqApiKey: process.env.GROQ_API_KEY,
   groqModel: process.env.GROQ_MODEL || 'llama-3.3-70b-versatile',
   mcpServerUrl: process.env.MCP_SERVER_URL,

@@ -9,7 +9,7 @@ This document outlines the end-to-end deployment strategy for the Weekly App Rev
 Before moving to a dedicated hosting provider, we first set up a GitHub Actions workflow to ensure the pipeline runs correctly in the cloud on a schedule.
 
 ### 1.1 The Workflow File
-Your repository includes a workflow file located at `.github/workflows/pulse.yml`. This file tells GitHub to automatically spin up a secure environment, install dependencies, inject your secrets, and run `npm start` every day at 10:30 AM IST (5:00 AM UTC).
+Your repository includes a workflow file located at `.github/workflows/pulse.yml`. This file tells GitHub to automatically spin up a secure environment, install dependencies, inject your secrets, and run `npm start` every Monday at 10:30 AM IST (5:00 AM UTC).
 
 It also supports a `workflow_dispatch` trigger, meaning you can manually click a "Run workflow" button in the GitHub UI at any time.
 
@@ -56,7 +56,7 @@ By default, Railway tries to deploy repositories as continuous Web Services. Bec
 2. Go to the **Settings** tab.
 3. Under the **General** section, look for **Service Type**.
 4. Change the Service Type from *Web Service* to **Cron Job**.
-5. Set the **Cron Schedule** to `0 5 * * *` (which is 10:30 AM IST).
+5. Set the **Cron Schedule** to `0 5 * * 1` (which is every Monday at 10:30 AM IST).
 6. Ensure the **Start Command** is set to `npm start`.
 
 ### 2.3 Set Environment Variables

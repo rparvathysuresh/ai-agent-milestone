@@ -31,5 +31,5 @@ jobs:
           MCP_AUTH_TOKEN: ${{ secrets.MCP_AUTH_TOKEN }}
           GOOGLE_DOC_ID: ${{ secrets.GOOGLE_DOC_ID }}
           PULSE_RECIPIENT: ${{ secrets.PULSE_RECIPIENT }}
-          REVIEW_WINDOW_WEEKS: 10
+          REVIEW_WINDOW_WEEKS: 4
         run: npm start

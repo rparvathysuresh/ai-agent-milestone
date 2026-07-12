@@ -8,11 +8,12 @@
 
 The system is an **AI-powered agent pipeline** that:
 
-1. Ingests public mobile-app reviews (App Store & Play Store).
-2. Clusters them into ≤ 5 themes using an LLM.
-3. Generates a scannable weekly pulse (≤ 250 words).
-4. **Finalises the report and email body using Groq LLM** — polished, stakeholder-ready prose.
-5. Publishes the pulse to **Google Docs** and creates a **Gmail draft** — both via **MCP servers**.
+1. **Runs automatically** every day at 10:30 AM IST via GitHub Actions.
+2. Ingests public mobile-app reviews (App Store & Play Store).
+3. Clusters them into ≤ 5 themes using an LLM.
+4. Generates a scannable weekly pulse (≤ 250 words).
+5. **Finalises the report and email body using Groq LLM** — polished, stakeholder-ready prose.
+6. Publishes the pulse to **Google Docs** and creates a **Gmail draft** — both via **MCP servers**.
 
 ```mermaid
 flowchart LR
@@ -30,6 +31,10 @@ flowchart LR
 
 ```mermaid
 graph TD
+    subgraph Trigger
+        CRON["GitHub Actions\nCron Scheduler\n(10:30 AM IST)"]
+    end
+
     subgraph Data Layer
         R1["App Store Reviews\n(public export / RSS)"]
         R2["Play Store Reviews\n(public CSV export)"]
@@ -56,6 +61,7 @@ graph TD
         EMAIL["Gmail Draft\n(with link / inline note)"]
     end
 
+    CRON -.->|triggers| IN
     R1 --> IN
     R2 --> IN
     IN --> PII
@@ -255,6 +261,18 @@ sequenceDiagram
     GM-->>MCPG: draftId
     MCPG-->>Agent: { draftId }
 ```
+
+---
+
+### 3.7 GitHub Actions Scheduler
+
+To ensure stakeholders receive the latest data automatically, the entire pipeline is triggered by a **GitHub Actions Cron Job**.
+
+| Responsibility | Details |
+|---|---|
+| **Schedule** | `0 5 * * *` (Runs every day at 5:00 AM UTC / 10:30 AM IST). |
+| **Execution** | Spins up an ephemeral `ubuntu-latest` runner, checks out the code, installs dependencies via `npm ci`, and executes the Node.js pipeline. |
+| **Secrets Management** | Injects necessary tokens (e.g., `GROQ_API_KEY`, `MCP_AUTH_TOKEN`) securely into the environment so they aren't hardcoded. |
 
 ---
 

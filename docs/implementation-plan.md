@@ -31,6 +31,9 @@ gantt
 
     section Phase 6
     MCP Integration (Docs & Gmail)   :p6, after p5, 2d
+
+    section Phase 7
+    GitHub Actions Scheduler         :p7, after p6, 1d
 ```
 
 ---
@@ -452,6 +455,34 @@ sequenceDiagram
 
 ---
 
+## Phase 7 — GitHub Actions Scheduler
+
+**Goal:** Automate the pipeline to run periodically every day at 10:30 AM IST (5:00 AM UTC) to process the latest data without manual intervention.
+
+### Tasks
+
+1. **Create GitHub Actions Workflow**
+   - Create `.github/workflows/pulse.yml`.
+   - Configure a `schedule` trigger with the cron expression `0 5 * * *` (10:30 AM IST).
+   - Configure a `workflow_dispatch` trigger for manual runs.
+
+2. **Define Runner Environment**
+   - Set up an `ubuntu-latest` runner.
+   - Use `actions/setup-node@v4` with Node 18.
+   - Run `npm ci` to install dependencies cleanly.
+
+3. **Inject Secrets & Execute**
+   - Read necessary environment variables (`GROQ_API_KEY`, `MCP_SERVER_URL`, `MCP_AUTH_TOKEN`, `GOOGLE_DOC_ID`, `PULSE_RECIPIENT`) securely from GitHub Secrets.
+   - Run `npm start`.
+
+### Exit Criteria
+
+- [x] GitHub Actions workflow `.github/workflows/pulse.yml` is created.
+- [x] Cron schedule is accurately set to `0 5 * * *`.
+- [x] Environment variables are correctly mapped to GitHub Secrets.
+
+---
+
 ## Verification Plan
 
 ### Automated Checks (per phase)
@@ -464,6 +495,7 @@ sequenceDiagram
 | 4 | Pulse is ≤ 250 words, correct structure | `node src/index.js` (inspect logs + output) |
 | 5 | Groq returns polished report + email body | `node src/index.js` (inspect logs + output) |
 | 6 | Doc URL and Draft ID returned | `node src/index.js` (inspect logs) |
+| 7 | Scheduler triggers at correct time | Monitor GitHub Actions UI under "Actions" |
 
 ### Manual Verification
 

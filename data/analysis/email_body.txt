@@ -1,0 +1,12 @@
+Subject: Weekly App Review Pulse — Key Takeaways and Actions
+
+Hello Team,
+
+This week's app review pulse highlights key themes: user satisfaction with the app's ease of use, concerns over high brokerage charges, and feature requests. Top user comments praise the app's convenience, but criticize fees and request new features like international market access.
+
+Key action items:
+- Refine onboarding and educational resources
+- Optimize brokerage charges and fees
+- Prioritize feature requests and update the development roadmap
+
+For the full report, visit {docUrl}. Let's work together to address these areas and enhance our app's overall user experience.

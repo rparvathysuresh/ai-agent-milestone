@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "google-docs": {
+      "endpoint": "http://localhost:3001",
+      "description": "MCP server for Google Docs operations (create, update, get)"
+    },
+    "gmail": {
+      "endpoint": "http://localhost:3002",
+      "description": "MCP server for Gmail operations (create-draft)"
+    }
+  }
+}

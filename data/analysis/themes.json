@@ -1,0 +1,82 @@
+{
+  "themes": [
+    {
+      "label": "Brokerage Charges",
+      "sentiment": "negative",
+      "urgency": "high",
+      "description": "Users are unhappy with the high brokerage charges and fees associated with the app.",
+      "reviewCount": 8,
+      "representativeQuotes": [
+        "Ya app bahut jada brokerage charges lata ha.",
+        "high brokerage fees....more than half the profit we make...ridiculous",
+        "DP charges are high and For investors - brokerage on equity delivery!!"
+      ],
+      "actionInsight": "The product team should review and optimize the brokerage charges and fees to make them more competitive and transparent."
+    },
+    {
+      "label": "App Stability",
+      "sentiment": "negative",
+      "urgency": "critical",
+      "description": "Users are experiencing issues with the app's stability, including crashes, lags, and failed page loads.",
+      "reviewCount": 6,
+      "representativeQuotes": [
+        "This app have high charges and when you try to talk to agent you will get no response . sometimes it hangs while placing order.",
+        "Last few months this app is unusable. every time page fail to load page fail to load even when there is good internet connection.",
+        "The app experienced a severe technical glitch during live trading, and customer support’s resolution process is completely unacceptable."
+      ],
+      "actionInsight": "The product team should prioritize fixing the app's stability issues to prevent user frustration and potential loss of business."
+    },
+    {
+      "label": "Customer Support",
+      "sentiment": "negative",
+      "urgency": "high",
+      "description": "Users are unhappy with the quality of customer support, including unresponsive agents and unhelpful resolution processes.",
+      "reviewCount": 5,
+      "representativeQuotes": [
+        "This app have high charges and when you try to talk to agent you will get no response .",
+        "The app experienced a severe technical glitch during live trading, and customer support’s resolution process is completely unacceptable.",
+        "I bought an Aye Finance Ltd bond through Groww, but my payout has not been credited. Despite investing through their platform, Groww has refused to help and said I must deal directly with the RTA, offering no support."
+      ],
+      "actionInsight": "The product team should improve the customer support experience by providing more responsive and helpful agents, as well as streamlining the resolution process."
+    },
+    {
+      "label": "Feature Requests",
+      "sentiment": "mixed",
+      "urgency": "medium",
+      "description": "Users are requesting new features, including international market access, stop-loss and target for GTT orders, and improved fund comparison tools.",
+      "reviewCount": 8,
+      "representativeQuotes": [
+        "hey team groww...I'm looking forward to see SLBM-stock lending and borrowing mechanism facility being implemented for users loke me ASAP.",
+        "good application but fund comparison is the worst one. please add something like overlap % companies, last 5yr return reason etc if possible.",
+        "Please add Telugu language support to the Groww app."
+      ],
+      "actionInsight": "The product team should prioritize feature requests based on user demand and feasibility, and provide regular updates on the development roadmap."
+    },
+    {
+      "label": "User Experience",
+      "sentiment": "positive",
+      "urgency": "low",
+      "description": "Users are generally satisfied with the app's user experience, including its ease of use and intuitive interface.",
+      "reviewCount": 20,
+      "representativeQuotes": [
+        "This app is nice investing in stocks, bonds mutual funds and other investment avenues. The facilities are convenient and user friendly.",
+        "very user friendly & gives all informative technical data to analyze investments",
+        "I have had a very good experience using Groww. The app is simple, user-friendly, and makes investing in stocks, mutual funds, and other financial products easy, even for beginners."
+      ],
+      "actionInsight": "The product team should continue to refine and improve the user experience, including simplifying the onboarding process and providing more educational resources for new users."
+    }
+  ],
+  "competitorMentions": [
+    "Zerodha",
+    "Indmoney",
+    "Angel One"
+  ],
+  "overallSentiment": "mixed",
+  "totalReviewsAnalysed": 63,
+  "sentimentBreakdown": {
+    "positive": 32,
+    "negative": 18,
+    "mixed": 4,
+    "feature_request": 9
+  }
+}

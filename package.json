@@ -1,0 +1,29 @@
+{
+  "name": "weekly-app-review-pulse",
+  "version": "1.0.0",
+  "description": "AI-powered pipeline that turns mobile app reviews into a weekly stakeholder pulse, delivered via Google Docs and Gmail (MCP).",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "reviews",
+    "pulse",
+    "mcp",
+    "groq",
+    "gemini"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "csv-parse": "^7.0.1",
+    "dotenv": "^17.4.2",
+    "eventsource": "^4.1.0",
+    "google-play-scraper": "^10.1.3",
+    "groq-sdk": "^1.3.0"
+  }
+}

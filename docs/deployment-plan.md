@@ -29,13 +29,14 @@ For the pipeline to authenticate with Groq and your MCP server, you must provide
 5. Add the following secrets one by one, copying the values from your local `.env` file:
 
 **Required Secrets to add:**
-- `GROQ_API_KEY` = `gsk_...`
+- `LLM_API_KEY` = `AQ.Ab8...` (Your Gemini API Key)
+- `GROQ_API_KEY` = `gsk_...` (Your Groq API Key)
 - `MCP_SERVER_URL` = (Ensure this points to your hosted Railway MCP server, e.g., `https://mcp-server-production-1ca2.up.railway.app/sse`, NOT localhost)
 - `MCP_AUTH_TOKEN` = `parvathy`
 - `GOOGLE_DOC_ID` = `1ldtyOUNdIMLr1LbtXQ4BxYwIVHrn_fT8YaUSQTno0W4`
 - `PULSE_RECIPIENT` = `rparvathysuresh@gmail.com`
 
-*(Note: Constants like `GROQ_MODEL` and `REVIEW_WINDOW_WEEKS` are already hardcoded in the workflow file for convenience, so you don't need to add them as secrets).*
+*(Note: Constants like models and `REVIEW_WINDOW_WEEKS` are already hardcoded in the workflow file for convenience, so you don't need to add them as secrets).*
 
 ---
 

@@ -143,11 +143,14 @@ async function runPipeline() {
   // ── Phase 3: Theme Clustering ─────────────────────────────
   console.log('┌─ Phase 3: Theme Clustering via Groq ──────────────');
   console.log('│');
-  console.log(`│  Sending ${reviews.length} reviews to ${config.groqModel}...`);
+  // Cap reviews to 35 to avoid Groq TPM limits on the free tier
+  const reviewsForGroq = reviews.slice(0, 35);
+
+  console.log(`│  Sending ${reviewsForGroq.length} reviews to ${config.groqModel}...`);
 
   let themeMap;
   try {
-    themeMap = await clusterReviewsIntoThemes(reviews, config.groqApiKey, config.groqModel);
+    themeMap = await clusterReviewsIntoThemes(reviewsForGroq, config.groqApiKey, config.groqModel);
   } catch (err) {
     console.log(`│  ✗ Theme clustering failed: ${err.message}`);
     console.log('└──────────────────────────────────────────────────');

@@ -11,7 +11,7 @@ Railway Cron Jobs require a paid tier, but GitHub Actions provides generous free
 Ensure your repository is pushed to GitHub. The code now includes a workflow file located at `.github/workflows/pulse.yml`.
 
 ### 1.1 The Workflow File
-This file tells GitHub to automatically spin up a secure environment, install dependencies, inject your secrets, and run `npm start` every Monday at 9:00 AM UTC.
+This file tells GitHub to automatically spin up a secure environment, install dependencies, inject your secrets, and run `npm start` every day at 10:30 AM IST (5:00 AM UTC).
 
 It also supports a `workflow_dispatch` trigger, meaning you can manually click a "Run workflow" button in the GitHub UI at any time to run the pipeline instantly.
 
